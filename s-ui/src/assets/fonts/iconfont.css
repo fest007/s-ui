@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1687831011507') format('truetype');
+}
+
+[class*='s-icon-'] {
+  font-family: "iconfont" !important;
+  /* font-size: 16px; */
+  font-style: normal;
+  font-weight: normal;
+  /* 字体的变体效果 */
+  font-variant: normal;
+  /* 控制文本的大小写和其他转换方式 */
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.s-icon-view:before {
+  content: "\e633";
+}
+
+.s-icon-view-off:before {
+  content: "\e634";
+}
+
+.s-icon-search:before {
+  content: "\e63c";
+}
+
+.s-icon-link:before {
+  content: "\e63e";
+}
+
+.s-icon-share:before {
+  content: "\e63f";
+}
+
+.s-icon-setting:before {
+  content: "\e640";
+}
+
+.s-icon-upload:before {
+  content: "\e641";
+}
+
+.s-icon-download:before {
+  content: "\e642";
+}
+
+.s-icon-play:before {
+  content: "\e643";
+}
+
+.s-icon-image:before {
+  content: "\e64a";
+}
+
+.s-icon-user:before {
+  content: "\e64d";
+}
+
+.s-icon-close-filled:before {
+  content: "\e651";
+}
+
+.s-icon-check:before {
+  content: "\e652";
+}
+
+.s-icon-close:before {
+  content: "\e653";
+}
+
+.s-icon-check-filled:before {
+  content: "\e654";
+}
+
+.s-icon-forbidden:before {
+  content: "\e655";
+}
+
+.s-icon-info-filled:before {
+  content: "\e656";
+}
+
+.s-icon-info:before {
+  content: "\e657";
+}
+
+.s-icon-help-filled:before {
+  content: "\e658";
+}
+
+.s-icon-help:before {
+  content: "\e659";
+}
+
+.s-icon-caution:before {
+  content: "\e65a";
+}
+
+.s-icon-caution-filled:before {
+  content: "\e65b";
+}
+
+.s-icon-arrow-up:before {
+  content: "\e65c";
+}
+
+.s-icon-arrow-left:before {
+  content: "\e65d";
+}
+
+.s-icon-arrow-down:before {
+  content: "\e65e";
+}
+
+.s-icon-arrow-right:before {
+  content: "\e65f";
+}
+

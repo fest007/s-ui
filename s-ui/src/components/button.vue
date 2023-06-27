@@ -1,8 +1,22 @@
 <template>
+    <!-- eslint-disable -->
     <!-- {'is-plain': plain}当值为真时加上键的类名 -->
-    <button class="s-button" :class="[`s-button-${type}`, {'is-plain': plain, 'is-round': round, 'is-circle': circle}]">
+    <button 
+        class="s-button" 
+        :class="[
+            `s-button-${type}`,
+            {'is-plain': plain,
+            'is-round': round,
+            'is-circle': circle,
+            'is-disabled': disabled}
+        ]"
+        @click="handleClick"
+        :disabled="disabled"
+    >
+        <i v-if="icon" :class=icon></i>
     <!-- slot默认插槽，用来接收父组件传递的内容 -->
-        <slot></slot>
+    <!-- 如果没有传入插槽内容时，span应该不显示,使用$slots.default获取默认插槽的内容 -->
+        <span v-if="$slots.default"><slot></slot></span>
     </button>
 </template>
 
@@ -29,8 +43,26 @@ export default {
         circle: {
             type: Boolean,
             default: false
-        }
+        },
+        icon: {
+            type: String,
+            default: ''
+        },
+        disabled: {
+            type: Boolean,
+            default: false
+        },
     },
+
+    created() {
+        // this.$slots可以拿到所有插槽的内容
+        // console.log(this.$slots);
+    },
+    methods: {
+        handleClick(e) {
+            this.$emit('click', e)
+        }
+    }
 }
 </script>
 
@@ -226,5 +258,15 @@ export default {
 .s-button.is-circle {
     border-radius: 50%;
     padding: 12px;
+}
+
+// 有图标有文字时的样式
+.s-button [class*=s-icon-]+span {
+    margin-left: 5px;
+}
+
+// disabled的样式
+.s-button.is-disabled {
+    cursor: no-drop;
 }
 </style>
